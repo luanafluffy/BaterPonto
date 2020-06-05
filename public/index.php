@@ -1,11 +1,18 @@
 <?php
 //(__FILE__, 2) -> diretorio principal
-require_once(dirname(__FILE__, 2) . '/src/config/database.php');
+require_once(dirname(__FILE__, 2) . '/src/config/config.php');
+// require_once(VIEW_PATH . '/login.php');
 
-$slq = 'SELECT * FROM users';
-$result = Database::getResultFromQuery($slq);
+require_once(MODEL_PATH . '/Login.php');
 
-while($row = $result->fetch_assoc()) {
-    print_r($row);
-    echo '<br>';
+$login = new Login([
+    'email' => 'admin@cod3r.com.br',
+    'password' => 'a'
+]);
+
+try {
+    $login->checkLogin();
+    echo "Deu certo! :D";
+} catch(Exception $e) {
+    echo 'Problema no login :P';
 }
