@@ -26,7 +26,7 @@ function getDayTemplateByOdds($regularRate, $extraRate, $lazyRate) {
         'time4' => '17:00:00',
         'worked_time' => DAILY_TIME - 1800
     ];
-
+    
     $value = rand(0, 100);
     if($value <= $regularRate) {
         return $regularDayTemplate;
@@ -55,10 +55,9 @@ function populateWorkingHours($userId, $initialDate, $regularRate, $extraRate, $
     }
 }
 
-
-$lastMonth = strtotime('first day of last month'); //Primeiro dia do mÊs passado
+$lastMonth = strtotime('first day of last month');
 populateWorkingHours(1, date('Y-m-1'), 70, 20, 10);
 populateWorkingHours(3, date('Y-m-d', $lastMonth), 20, 75, 5);
 populateWorkingHours(4, date('Y-m-d', $lastMonth), 20, 10, 70);
 
-echo "Tudo certo! :)";
+echo 'Tudo certo :)';

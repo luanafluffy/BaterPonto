@@ -5,7 +5,7 @@ $exception = null;
 
 if(count($_POST) > 0) {
     $login = new Login($_POST);
-    try{
+    try {
         $user = $login->checkLogin();
         $_SESSION['user'] = $user;
         header("Location: day_records.php");
@@ -13,5 +13,6 @@ if(count($_POST) > 0) {
         $exception = $e;
     }
 }
+
 
 loadView('login', $_POST + ['exception' => $exception]);

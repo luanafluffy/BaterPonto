@@ -1,6 +1,6 @@
 <?php
-
 $errors = [];
+
 
 if(isset($_SESSION['message'])) {
     $message = $_SESSION['message'];
@@ -23,11 +23,11 @@ if($message['type'] === 'error') {
 } else {
     $alertType = 'success';
 }
-
 ?>
+
 <?php if($message): ?>
     <div role="alert"
-        class="my3 alert alert-<?= $alertType ?>" >
+        class="my-3 alert alert-<?= $alertType ?>">
         <?= $message['message'] ?>
     </div>
 <?php endif ?>
