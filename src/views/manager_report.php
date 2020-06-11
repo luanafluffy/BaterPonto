@@ -10,7 +10,7 @@
     <div class="summary-boxes">
         <div class="summary-box bg-secondary">
             <i class="icon icofont-users"></i>
-            <p class="title">Qtde de Funcionários</p>
+            <p class="title">Qtde de Colaborador(s)</p>
             <h3 class="value"><?= $activeUsersCount ?></h3>
         </div>
         <div class="summary-box bg-danger">
