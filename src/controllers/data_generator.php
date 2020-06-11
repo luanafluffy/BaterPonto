@@ -1,6 +1,6 @@
 <?php
-Database::executeSQL('DELETE FROM working_hours');
-Database::executeSQL('DELETE FROM users WHERE id > 5');
+Database::executeSQL('DELETE FROM horas_atividade');
+Database::executeSQL('DELETE FROM usuarios WHERE id > 5');
 
 function getDayTemplateByOdds($regularRate, $extraRate, $lazyRate) {
     $regularDayTemplate = [

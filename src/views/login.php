@@ -14,11 +14,10 @@
     <form class="form-login" action="#" method="post">
         <div class="login-card card">
             <div class="card-header">
-                <i class="icofont-travelling mr-2"></i>
-                <span class="font-weight-light">In</span>
-                <span class="font-weight-bold mx-2">N'</span>
-                <span class="font-weight-light">Out'</span>
-                <i class="icofont-runner-alt-1 ml-2"></i>
+                <i class="icofont-login mr-2"></i>
+                <span class="font-weight-light">Bater</span>
+                <span class="font-weight-light">&nbsp;Ponto</span>
+                <i class="icofont-logout ml-2"></i>
             </div>
             <div class="card-body">
                 <?php include(TEMPLATE_PATH . '/messages.php') ?>
@@ -38,7 +37,7 @@
                 </div>
             </div>
             <div class="card-footer">
-                <button class="btn btn-lg btn-primary">Entrar</button>
+                <button class="btn btn-lg btn-danger">Entrar</button>
             </div>
         </div>
     </form>

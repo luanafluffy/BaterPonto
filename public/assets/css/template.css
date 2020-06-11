@@ -8,7 +8,7 @@ body {
         "sidebar footer";
     height: 100vh;
     margin: 0;
-    background-color: #DDD;
+    background-color: rgba(187, 157, 138, 0.322);
 }
 
 body.hide-sidebar {
@@ -22,10 +22,10 @@ body.hide-sidebar {
 header.header {
     grid-area: header;
     display: flex;
-    background-color: #1976D2;
+    background-color: #8C2F20 ;
     align-items: center;
     z-index: 10;
-    box-shadow:
+    box-shadow: 
         0 2px 4px -1px rgba(0, 0, 0, .2),
         0 4px 4px 0px rgba(0, 0, 0, .14),
         0 1px 10px 0px rgba(0, 0, 0, .12);
@@ -33,12 +33,12 @@ header.header {
 
 header.header .logo {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     color: white;
     font-size: 2rem;
     flex-basis: 250px;
-    height: 64px;
+    height: 100%;
 }
 
 header.header .menu-toggle {
@@ -52,6 +52,7 @@ header.header .spacer {
 
 header.header .dropdown {
     position: relative;
+    height: 100%;
 }
 
 header.header .dropdown-button {
@@ -69,7 +70,7 @@ header.header .dropdown-content {
     position: absolute;
     min-width: 100%;
     background-color: #f9f9f9;
-    padding: 15px 0px;
+    padding: 7px 0px;
     z-index: 100;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, .2);
 }
@@ -78,7 +79,7 @@ header.header .dropdown:hover .dropdown-content {
     display: block;
 }
 
-header.header .dropdown-content ul{
+header.header .dropdown-content ul {
     list-style: none;
     padding-left: 0;
     margin-bottom: 0;
@@ -92,8 +93,9 @@ header.header .dropdown-content a {
     padding: 7px;
     font-size: 1.1rem;
 }
+
 header.header .dropdown-content a:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, .05);
 }
 
 header.header .dropdown:hover {
@@ -112,7 +114,7 @@ aside.sidebar {
     align-items: center;
     grid-area: sidebar;
     box-shadow: -5px 0px 25px 1px rgba(0, 0, 0, 0.4);
-    background-color: #FFF;
+    background-color: #ffff;
 }
 
 aside.sidebar .menu {
@@ -126,52 +128,54 @@ aside.sidebar .menu ul.nav-list {
     margin: 0;
 }
 
-/* ------------ Item -> Menu ------------*/
 aside.sidebar .menu li.nav-item {
     margin: 0;
-    padding: 10px 0px 10px 25px
+    padding: 10px 10px 10px 25px;
 }
+
 aside.sidebar .menu li.nav-item:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
-aside.sidebar .menu li.nav-item:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-}
+
+
 aside.sidebar .menu li.nav-item a {
     font-size: 1.2rem;
-    color: #555;
+    color: #472520;
     text-decoration: none;
 }
 
-/* Widget -> Menu */
-
-body .hide-sidebar aside.sidebar {
+body.hide-sidebar aside.sidebar {
     display: none;
 }
+
 aside.sidebar .sidebar-widgets {
     position: sticky;
     bottom: 20px;
 }
+
 aside.sidebar .sidebar-widget {
     display: flex;
     align-items: center;
 }
+
 aside.sidebar .sidebar-widget .icon {
     font-size: 3.5rem;
     margin: 2px 10px 2px 0px;
 }
+
 aside.sidebar .sidebar-widget .info {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex: 1;
 }
+
 .division {
     widows: 80%;
     border: solid 1px #EEE;
 }
 
-aside.sidebar .icon main {
+aside.sidebar .info .main {
     font-size: 2rem;
 }
 
@@ -181,7 +185,7 @@ main.content {
     margin: 20px;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);    
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
 }
 
 main.content .content-title {
@@ -194,12 +198,14 @@ main.content .content-title {
 main.content .content-title .icon {
     font-size: 3rem;
 }
+
 main.content .content-title h1 {
     color: #444;
     font-size: 1.8rem;
     font-weight: 300;
     margin: 0;
 }
+
 main.content .content-title h2 {
     color: #888;
     font-size: 1.2rem;
@@ -208,43 +214,46 @@ main.content .content-title h2 {
 }
 
 footer.footer {
-    color: #FFF;
+    display: flex;
     justify-content: flex-end;
     align-items: center;
     padding-right: 20px;
-    font-size:  1.2rem;
+    font-size: 1rem;
     grid-area: footer;
-    display: flex;
-    background-color: #222;
+    background-color: #8C2F20  ;
+    color: #ffff;
 }
 
 .record {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
 }
 
-/* Relatório Gerencial (qtde de funcionarios, faltas e hrs do mes) */
 .summary-boxes {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
 .summary-box {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
     color: #fff;
+    padding: 10px;
     border-radius: 10px;
     margin: 10px;
     min-width: 200px;
 }
+
 .summary-box .icon {
     font-size: 3.5rem;
 }
+
 .summary-box .title {
     font-size: 1.5rem;
 }
+
 .summary-box .value {
     font-size: 2rem;
 }

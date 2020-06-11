@@ -2,7 +2,7 @@
     <?php
         renderTitle(
             'Relatório Mensal',
-            'Acompanhe seu saldo de horas',
+            'Acompanhe os saldos de horas',
             'icofont-ui-calendar'
         )
     ?>
@@ -28,7 +28,7 @@
                         }
                     ?>
                 </select>
-                <button class="btn btn-primary ml-2">
+                <button class="btn btn-warning ml-2">
                     <i class="icofont-search"></i>
                 </button>
             </div>

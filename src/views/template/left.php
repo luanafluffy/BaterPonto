@@ -35,13 +35,13 @@
     </nav>
     <div class="sidebar-widgets">
         <div class="sidebar-widget">
-            <i class="icon icofont-hour-glass text-primary"></i>
+            <i class="icon icofont-hour-glass text-warning"></i>
             <div class="info">
-                <span class="main text-primary"
+                <span class="main text-warning"
                     <?= $activeClock === 'workedInterval' ? 'active-clock' : '' ?>>
                     <?= $workedInterval ?>
                 </span>
-                <span class="label text-muted">Horas Trabalhadas</span>
+                <span class="label text-muted">Horas Registradas</span>
             </div>
         </div>
         <div class="division my-3"></div>
@@ -52,7 +52,7 @@
                     <?= $activeClock === 'exitTime' ? 'active-clock' : '' ?>>
                     <?= $exitTime ?>
                 </span>
-                <span class="label text-muted">Hora de Saída</span>
+                <span class="label text-muted">Hora de Cair Fora</span>
             </div>
         </div>
     </div>

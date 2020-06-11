@@ -1,7 +1,7 @@
 <?php
 
 class WorkingHours extends Model {
-    protected static $tableName = 'working_hours';
+    protected static $tableName = 'horas_atividade';
     protected static $columns = [
         'id',
         'user_id',
@@ -112,10 +112,10 @@ class WorkingHours extends Model {
     public static function getAbsentUsers() {
         $today = new DateTime();
         $result = Database::getResultFromQuery("
-            SELECT name FROM users
+            SELECT name FROM usuarios
             WHERE end_date is NULL
             AND id NOT IN (
-                SELECT user_id FROM working_hours
+                SELECT user_id FROM horas_atividade
                 WHERE work_date = '{$today->format('Y-m-d')}'
                 AND time1 IS NOT NULL
             )
