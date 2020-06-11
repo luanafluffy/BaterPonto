@@ -1,2 +1,5 @@
 <?php
-// Controller temporário!!!
+//Controller temporário!!
+
+
+echo WorkingHours::getCount();

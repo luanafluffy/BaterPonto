@@ -9,7 +9,7 @@
     ?>
     <div class="card">
         <div class="card-header">
-            <h3><?= $today ?></h3>
+            <h3><?= $today ?> </h3>
             <p class="mb-0">Os batimentos efetuados hoje</p>
         </div>
         <div class="card-body">
@@ -29,15 +29,14 @@
             </a>
         </div>
     </div>
-
     <form class="mt-5" action="innout.php" method="post">
         <div class="input-group no-border">
-            <input type="text" name="forcedTime" class="form-control"
-                placeholder="Informe a hora para simular o batimento">
-            <button class="btn btn-danger ml-3">
+            <input type="text" name="forcedTime" class="form-control" placeholder="Informe a hora para simular o batimento.">
+            
+            <button class="btn btn-danger ml3">
                 Simular Ponto
             </button>
         </div>
     </form>
-
+  
 </main>

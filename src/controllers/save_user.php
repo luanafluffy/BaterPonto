@@ -8,8 +8,8 @@ $userData = [];
 if(count($_POST) === 0 && isset($_GET['update'])) {
     $user = User::getOne(['id' => $_GET['update']]);
     $userData = $user->getValues();
-    $userData['password'] = null;
-} elseif(count($_POST) > 0) {
+    $userData['password'] = null; //Não retorna senha
+}elseif(count($_POST) > 0) {
     try {
         $dbUser = new User($_POST);
         if($dbUser->id) {
