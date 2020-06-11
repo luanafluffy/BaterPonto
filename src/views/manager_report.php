@@ -28,7 +28,7 @@
         <div class="card mt-4">
             <div class="card-header">
                 <h4 class="card-title">Faltosos do Dia</h4>
-                <p class="card-category mb-0">Relação dos funcionários que ainda não bateram o ponto.</p>
+                <p class="card-category mb-0">Relação dos colaboradores que ainda não bateram o ponto.</p>
             </div>
             <div class="card-body">
                 <table class="table table-bordered table-striped table-hover">
